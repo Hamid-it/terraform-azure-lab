@@ -14,4 +14,11 @@ resource "azurerm_storage_account" "lab" {
   location                 = data.azurerm_resource_group.lab.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
+
+  tags = {
+    Environment = "Lab"
+    Owner       = "Hamid"
+    ManagedBy   = "Terraform"
+    Project     = "AzureLab"
+  }
 }
